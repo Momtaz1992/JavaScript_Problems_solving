@@ -17,6 +17,6 @@ function sumOfPositive(arr){
 console.log(sumOfPositive([1,-2,3]));
 //second way
 function sumOfPositive2(arr){
-       return arr.filter((x)=> x>0).reduce((pre,cur)=> pre + cur)
+       return arr.filter((x)=> x>0).reduce((pre,cur)=> pre + cur,0)
 }
 console.log(sumOfPositive2([1,-2,3,-6]));
