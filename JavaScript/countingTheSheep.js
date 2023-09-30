@@ -12,4 +12,4 @@ function countSheeps(arrayOfSheep) {
        });
        return count;
 }
-console.log(countSheeps([true,false,true,false,true,false,true,false,true,false,]));
+console.log(countSheeps([true,false,true,false,true,false,true,false,true,false,true,false,true,false,]));
