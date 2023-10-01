@@ -41,3 +41,9 @@ function countPositivesAndSumNegatives(inputString){
        return [positiveNumber,negativesSum]
 }
 console.log(countPositivesAndSumNegatives([1,2,3,4,5,6,-1,-2,-3,-4,-5,-6]))
+
+// Double Char
+function doubleChar(str){
+       return str.split("").map((x)=> x.repeat(2)).join("")
+}
+console.log(doubleChar("string"))
