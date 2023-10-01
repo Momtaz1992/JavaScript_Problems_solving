@@ -7,11 +7,13 @@ console.log(oppositeNumber(-3))
 //Return Negative
 function returnNegativeNumber(number1) {
        if (number1 > 0) {
-         return -number1;
+              return -number1;
        } else if (number1 < 0) {
-         return +number1;
+              return +number1;
        }
-       return number1;
-     }
-     
-     console.log(returnNegativeNumber(-4));
+       return number1; 
+}
+
+console.log(returnNegativeNumber(-4));
+//second way 
+//function makenegative(num){ return num>0 ? -num : num}
