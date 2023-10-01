@@ -21,3 +21,23 @@ const num = parseFloat(str).toFixed(2);
 console.log(num)
 
 // count of positives / sum of negatives
+function countPositivesSumNegatives(input){
+       let positivesArray =[];
+       let sumNegatives=0;
+       for(let i=0;i<input.length;i++){
+              if(input[i]>0){
+                     positivesArray.push(input[i]);
+              }else{
+                     sumNegatives +=input[i];
+              }
+       }
+       return [positivesArray.length, sumNegatives];
+}
+console.log(countPositivesSumNegatives([1,2,3,4,5,6,-1,-2,-3,-4,-5,-6]))
+// second way
+function countPositivesAndSumNegatives(inputString){
+       let positiveNumber=inputString.filter((x)=> x>0).length
+       let negativesSum=inputString.filter((x)=> x<0).reduce((pre,cur)=> pre+cur)
+       return [positiveNumber,negativesSum]
+}
+console.log(countPositivesAndSumNegatives([1,2,3,4,5,6,-1,-2,-3,-4,-5,-6]))
