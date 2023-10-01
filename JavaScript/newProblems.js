@@ -47,3 +47,19 @@ function doubleChar(str){
        return str.split("").map((x)=> x.repeat(2)).join("")
 }
 console.log(doubleChar("string"))
+
+// Basic Mathematical Operations
+function basicOp(Operation,value1,value2){
+       return eval(value1 + Operation + value2)
+}
+console.log(basicOp("+",4,7))
+console.log(basicOp("*",4,7))
+
+//second Way 
+function basicOpp(Operation,value1,value2){
+       if(Operation === "+")return value1+value2;
+       if(Operation === "-")return value1-value2;
+       if(Operation === "*")return value1*value2;
+       if(Operation === "/")return value1/value2;
+}
+console.log(basicOp("+",4,7))
