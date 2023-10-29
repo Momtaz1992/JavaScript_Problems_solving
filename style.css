@@ -1,0 +1,153 @@
+*{
+       background-color: black;
+       margin: 20px auto;
+}
+@-webkit-keyframes honeycomb {
+       0%,
+       20%,
+       80%,
+       100% {
+              opacity: 0;
+              -webkit-transform: scale(0);
+              transform: scale(0);
+       }
+       30%,
+       70% {
+              opacity: 1;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+       }
+}
+
+@keyframes honeycomb {
+       0%,
+       20%,
+       80%,
+       100% {
+              opacity: 0;
+              -webkit-transform: scale(0);
+              transform: scale(0);
+       }
+       30%,
+       70% {
+              opacity: 1;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+       }
+}
+
+.honeycomb {
+       height: 24px;
+       position: relative;
+       width: 24px;
+}
+.honeycomb div {
+       -webkit-animation: honeycomb 2.1s infinite backwards;
+       animation: honeycomb 2.1s infinite backwards;
+       background: #f3f3f3;
+       height: 12px;
+       margin-top: 6px;
+       position: absolute;
+       width: 24px;
+}
+
+.honeycomb div:after, .honeycomb div:before {
+       content: '';
+       border-left: 12px solid transparent;
+       border-right: 12px solid transparent;
+       position: absolute;
+       left: 0;
+       right: 0;
+}
+.honeycomb div:after {
+       top: -6px;
+       border-bottom: 6px solid #f3f3f3;
+}
+
+.honeycomb div:before {
+       bottom: -6px;
+       border-top: 6px solid #f3f3f3;
+}
+
+.honeycomb div:nth-child(1) {
+       -webkit-animation-delay: 0s;
+       animation-delay: 0s;
+       left: -28px;
+       top: 0;
+}
+
+.honeycomb div:nth-child(2) {
+       -webkit-animation-delay: 0.1s;
+       animation-delay: 0.1s;
+       left: -14px;
+       top: 22px;
+}
+
+.honeycomb div:nth-child(3) {
+       -webkit-animation-delay: 0.2s;
+       animation-delay: 0.2s;
+       left: 14px;
+       top: 22px;
+}
+
+.honeycomb div:nth-child(4) {
+       -webkit-animation-delay: 0.3s;
+       animation-delay: 0.3s;
+       left: 28px;
+       top: 0;
+}
+
+.honeycomb div:nth-child(5) {
+       -webkit-animation-delay: 0.4s;
+       animation-delay: 0.4s;
+       left: 14px;
+       top: -22px;
+}
+
+.honeycomb div:nth-child(6) {
+       -webkit-animation-delay: 0.5s;
+       animation-delay: 0.5s;
+       left: -14px;
+       top: -22px;
+}
+
+.honeycomb div:nth-child(7) {
+       -webkit-animation-delay: 0.6s;
+       animation-delay: 0.6s;
+       left: 0;
+       top: 0;
+}
+.animated{
+       width: 700px;
+       display: flex;
+}
+.spinner {
+       width: 56px;
+       height: 56px;
+       display: grid;
+       color: #a2a01a;
+       background: radial-gradient(farthest-side, currentColor calc(100% - 6.7px),#0000 calc(100% - 5.6px) 0);
+       -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 14.6px),#000 calc(100% - 13.4px));
+       border-radius: 50%;
+       animation: spinner-sm4bhi 2s infinite linear;
+    }
+    
+    .spinner::before,
+    .spinner::after {
+       content: "";
+       grid-area: 1/1;
+       background: linear-gradient(currentColor 0 0) center,
+              linear-gradient(currentColor 0 0) center;
+       background-size: 100% 11.2px,11.2px 100%;
+       background-repeat: no-repeat;
+    }
+    
+    .spinner::after {
+       transform: rotate(45deg);
+    }
+    
+    @keyframes spinner-sm4bhi {
+       100% {
+          transform: rotate(1turn);
+       }
+    }

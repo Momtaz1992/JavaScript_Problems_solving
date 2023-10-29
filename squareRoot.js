@@ -33,3 +33,7 @@ function squareOrSquareRoot(array){
 
 const Example = 3.2
 console.log(Number.isInteger(Example)) // false
+console.log(2+2);
+
+
+
